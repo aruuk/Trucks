@@ -12,21 +12,24 @@ import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 public class Trucks {
+    public static final String BASE = "BASE";
+    public static final String ROUTE = "ROUTE";
+    public static final String REPAIR = "REPAIR";
     private int id;
     private String nameOfTruck;
-    private State state;
-    private Driver[] drivers;
+    private String driver;
+    private String states;
     public Trucks() {
     }
     public static final GsonBuilder GSONBUILDER = new GsonBuilder();
     public static final Path WRITE_PATH = Paths.get("lorry.json");
     public static final Gson GSON = GSONBUILDER.setPrettyPrinting().create();
-    public static Trucks makeTrucks(int id, String nameOfTruck,  State state, Driver[]drivers) {
+    public static Trucks makeTrucks(int id, String nameOfTruck, String drivers,String states) {
         Trucks trucks = new Trucks();
         trucks.id = id;
         trucks.nameOfTruck = nameOfTruck;
-        trucks.state = state;
-        trucks.drivers = drivers;
+        trucks.driver = drivers;
+        trucks.states=states;
         return trucks;
     }
 
@@ -69,24 +72,24 @@ public class Trucks {
         this.nameOfTruck = nameOfTruck;
     }
 
-    public State getState() {
-        return state;
+    public String getDriver() {
+        return driver;
     }
 
-    public void setState(State state) {
-        this.state = state;
+    public void setDriver(String drivers) {
+        this.driver = drivers;
     }
 
-    public Driver[] getDrivers() {
-        return drivers;
+    public String getStates() {
+        return states;
     }
 
-    public void setDrivers(Driver[] drivers) {
-        this.drivers = drivers;
+    public void setStates(String states) {
+        this.states = states;
     }
 
     @Override
     public String toString() {
-        return id + "   " + nameOfTruck +"                  " + state;
+        return id + "   " + nameOfTruck +"                  "+states;
     }
 }

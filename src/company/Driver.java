@@ -13,6 +13,7 @@ import java.nio.file.StandardOpenOption;
 public class Driver {
     private int id;
     private String name;
+    private String bus;
 
     public static final GsonBuilder GSONBUILDER = new GsonBuilder();
     public static final Path WRITE_PATH = Paths.get("drivers.json");
@@ -65,6 +66,14 @@ public class Driver {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getBus() {
+        return bus;
+    }
+
+    public void setBus(String bus) {
+        this.bus = bus;
     }
 
     @Override
