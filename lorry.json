@@ -2,20 +2,22 @@
   {
     "id": 1,
     "nameOfTruck": "Volvo",
-    "state": "BASE",
-    "drivers": [
-      {
-        "id": 1,
-        "name": "Petr"
-      },
-      {
-        "id": 2,
-        "name": "Askar"
-      },
-      {
-        "id": 3,
-        "name": "Uson"
-      }
+    "driver": "",
+    "states": "BASE"
+  },
+  {
+    "id": 2,
+    "nameOfTruck": "Renault",
+    "driver": "",
+    "states": "BASE"
+  },
+  {
+    "id": 3,
+    "nameOfTruck": "DAF XT",
+    "driver": "",
+    "states": "BASE"
+  }
+]
     ]
   },
   {
